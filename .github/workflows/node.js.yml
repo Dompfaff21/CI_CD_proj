@@ -16,10 +16,7 @@ jobs:
     steps:
       # Actions от github: проверяет репозиторий, гит и т.д.
       - uses: actions/checkout@v3
-      - name: Install Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+
       # Устанавливаем все необходимые зависимости и запускаем тесты node
       - name: npm install, test and build
         run: |
@@ -36,5 +33,5 @@ jobs:
           echo test, and deploy your project.
           
       - name: Run JS file for test
-        run: js/script.js
+        run: node js/script.js
         
